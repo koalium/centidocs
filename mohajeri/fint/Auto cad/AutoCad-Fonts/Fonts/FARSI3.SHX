@@ -1,0 +1,94 @@
+
+[ back]
+[clipping]
+
+[ON]On $S=X $S=DVIEW1
+[OFF]Off $S=X $S=DVIEW1
+**FRONT 3
+[ front]
+[clipping]
+
+[ON]On $S=X $S=DVIEW1
+[OFF]Off $S=X $S=DVIEW1
+
+[Eye]Eye $S=X $S=DVIEW1
+**RGNAUTO 3
+[RGNAUTO:]^C^CREGENAUTO
+
+[ON]On $S=X $S=DS
+[OFF]Off $S=X $S=DS
+**VIEW 3
+[VIEW:]'VIEW
+?
+
+[Delete]Delete;
+[Restore]Restore;
+[Save]Save;
+[Window]Window;
+**VPORTS 3
+[VPORTS:]^C^CVPORTS
+
+Save
+Restore
+Delete
+Join
+Single
+?
+
+[2]2 $S=X $S=VP2
+[3]3 $S=X $S=VP3
+4
+**VP2 3
+
+[Horizont]H $S=X $S=VPORTS
+[Vertical]V $S=X $S=VPORTS
+**VP3 3
+
+[Horizont]H $S=X $S=VPORTS
+[Vertical]V $S=X $S=VPORTS
+[Above]A $S=X $S=VPORTS
+[Below]B $S=X $S=VPORTS
+[Left]L $S=X $S=VPORTS
+[Right]R $S=X $S=VPORTS
+**LINE 3
+[LINE:]^C^CLINE
+
+[continue]^C^CLINE;;
+close
+undo
+.x
+.y
+.z
+.xy
+.xz
+.yz
+**3D 3
+[EDGSURF:]^C^CEDGESURF
+[REVSURF:]^C^CREVSURF
+[RULSURF:]^C^CRULESURF
+[TABSURF:]^C^CTABSURF
+
+[Surftb1:]'SETVAR SURFTAB1
+[Surftb2:]'SETVAR SURFTAB2
+
+[3DFACE:]$S=X $S=3DFACE ^C^C3DFACE
+[3DMESH:]^C^C3DMESH
+[3DPOLY:]$S=X $S=3DPOLY ^C^C3DPOLY
+
+[  3d	]^C^C^P(progn(setq m:err *error*)(princ))+
+(defun m:l3d () (cond ((null C:BOX)(vmon)(if (/= nil (findfile "3d.lsp"))+
+(progn (terpri)(prompt "Please wait...  Loading 3D Objects.  ");+
+(load "3d")(menucmd "S=X")(menucmd "S=3D2")(princ))(progn(terpri)(prompt +
+"The file `3d.lsp' was not found in your search path directories. ")(terpri);+
+(prompt "Check installation of the Support Files and try again.");+
+(princ))))((not (null C:BOX)) (menucmd "S=X") (menucmd "S=3D2")(princ))+
+(T(princ)))(setq *error* m:err m:err nil))(defun *error* (msg)(princ msg);+
+(menucmd "S=X")(menucmd "S=S")(setq *error* m:err m:err nil)(princ))(m:l3d);^P
+[objects]^C^C^P(progn(setq m:err *error*)(princ))+
+(defun m:l3d () (cond ((null C:BOX)(vmon)(if (/= nil (findfile "3d.lsp"))+
+(progn (terpri)(prompt "Please wait...  Loading 3D Objects.  ");+
+(load "3d")(menucmd "S=X")(menucmd "S=3D2")(princ))(progn(terpri)(prompt +
+"The file `3d.lsp' was not found in your search path directories. ")(terpri);+
+(prompt "Check installation of the Support Files and try again.");+
+(princ))))((not (null C:BOX)) (menucmd "S=X") (menucmd "S=3D2")(princ))+
+(T(princ)))(setq *error* m:err m

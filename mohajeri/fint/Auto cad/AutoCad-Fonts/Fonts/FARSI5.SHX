@@ -1,0 +1,191 @@
+END ?
+
+[Yes]^C^CEND
+[No]$S=X $S=S
+**QUIT 3
+[QUIT:]^c^cquit
+
+[Yes]Y
+[No]n $S=X $S=S
+**VAR1 3
+[dimalt]$S=X $S=OF DIMALT \
+[dimaltd]DIMALTD \
+[dimaltf]DIMALTF \
+[dimapost]DIMAPOST \
+[dimaso]$S=X $S=OF DIMASO \
+[dimasz]DIMASZ \
+[--------]
+[dimblk]DIMBLK \
+[dimblk1]DIMBLK1 \
+[dimblk2]DIMBLK2 \
+[--------]
+[dimcen]DIMCEN \
+[dimdle]DIMDLE \
+[dimdli]DIMDLI \
+[dimexe]DIMEXE \
+
+[next]$S=X $S=VAR2
+[DIMMENU]$S=X $S=DIM
+
+
+**VAR2 3
+[dimexo]DIMEXO \
+[dimlfac]DIMLFAC \
+[dimlim]$S=X $S=OF DIMLIM \
+[dimpost]DIMPOST \
+[dimrnd]DIMRND \
+[dimsah]$S=X $S=OF DIMSAH \
+[dimscale]DIMSCALE \
+[dimse1]$S=X $S=OF DIMSE1 \
+[dimse2]$S=X $S=OF DIMSE2 \
+[dimsho]$S=X $S=OF DIMSHO \
+[dimsoxd]$S=X $S=OF DIMSOXD \
+[dimtad]$S=X $S=OF DIMTAD \
+[dimtih]$S=X $S=OF DIMTIH \
+[dimtix]$S=X $S=OF DIMTIX \
+
+[previous]$S=X $S=VAR1
+[next]$S=X $S=VAR3
+[DIMMENU]$S=X $S=DIM
+
+
+**VAR3 3
+[dimtm]DIMTM \
+[dimtofl]$S=X $S=OF DIMTOFL \
+[dimtoh]$S=X $S=OF DIMTOH \
+[dimtol]$S=X $S=OF DIMTOL \
+[dimtp]DIMTP \
+[dimtsz]DIMTSZ \
+[dimtvp]DIMTVP \
+[dimtxt]DIMTXT \
+[dimzin]$S=X $S=DIMZIN DIMZIN \
+
+
+
+
+
+
+
+[previous]$S=X $S=VAR2
+[DIMMENU]$S=X $S=DIM
+**OF 3
+[ON]$S= $S= ON
+
+[OFF]$S= $S= OFF
+**DIMZIN 4
+[  New]
+[ Dimzin]
+[ Value]
+
+
+
+
+[0]$S= $S= 0
+[1]$S= $S= 1
+[2]$S= $S= 2
+[3]$S= $S= 3
+**FORMAT 3
+[DIM:]^C^CDIM
+[DIM1:]^C^CDIM1
+
+[HOMETEXT]$S=X $S=HOMETEXT HOMETEXT
+[UPDATE]$S=X $S=UPDATE UPDATE
+[NEWTEXT]$S=X $S=NEWTEXT NEWTEXT
+
+
+
+
+
+
+
+
+
+[DIMMENU]$S=X $S=DIM
+**HOMETEXT 3
+[DIM:]^C^CDIM
+[DIM1:]^C^CDIM1
+
+HOMETEXT
+
+Window
+Last
+Previous
+Crossing
+Remove
+Add
+Undo
+**UPDATE 3
+[DIM:]^C^CDIM
+[DIM1:]^C^CDIM1
+
+UPDATE
+
+Window
+Last
+Previous
+Crossing
+Remove
+Add
+Undo
+**NEWTEXT 3
+[DIM:]^C^CDIM
+[DIM1:]^C^CDIM1
+
+[NEWTEXT]NEWTEXT
+
+Window
+Last
+Previous
+Crossing
+Remove
+Add
+Undo
+**LINETYPE 3
+[LINETYP:]^C^CLINETYPE
+?
+
+Create
+Load
+[Set]S $S=X $S=CHLT \$S=X $S=LINETYPE
+
+Yes
+No
+**LIMITS 3
+[LIMITS:]^C^CLIMITS
+
+On
+Off
+**SNAP 3
+[SNAP:]^C^CSNAP
+
+ON
+OFF
+
+[Aspect]A;
+[Rotate]R;
+
+[Style]S;
+[ Iso]Iso;
+[ Standrd]Standard;
+**TABLET 3
+[TABLET:]^C^CTABLET
+
+cal
+[config]CFG 4 25 9 11 9 9 13 25 7 Y
+[re-cfg]CFG 4 Y 25 9 11 9 9 13 25 7 Y
+ON
+OFF
+Yes
+No
+**OSNAPC 3
+[OSNAP:]^C^COSNAP
+
+[CENter]CENTER\
+[ENDpoint]ENDPOINT\
+[INSert]INSERT\
+[INTersec]INTERSEC\
+[MIDpoint]MIDPOINT\
+[NEArest]NEAREST\
+[NODe]NODE\
+[PERpend]PERPEND\
+[QUAdrant]QUADRA

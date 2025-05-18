@@ -1,0 +1,218 @@
+
+[S,C,E:]*^C^CARC \C \DRAG
+[S,C,A:]*^C^CARC \C \A DRAG
+[S,C,L:]*^C^CARC \C \L DRAG
+[S,E,A:]*^C^CARC \E \A
+[S,E,R:]*^C^CARC \E \R
+[S,E,D:]*^C^CARC \E \D DRAG
+[C,S,E:]*^C^CARC C \\DRAG
+[C,S,A:]*^C^CARC C \\A DRAG
+[C,S,L:]*^C^CARC C \\L DRAG
+[CONTIN:]^C^CARC ;DRAG
+**CIRCLE 3
+[CIRCLE]
+
+[CEN,RAD:]^C^CCIRCLE \DRAG
+[CEN,DIA:]^C^CCIRCLE \D
+[2 POINT:]^C^CCIRCLE 2P \DRAG
+[3 POINT:]^C^CCIRCLE 3P \\DRAG
+[TTR:]^C^CCIRCLE TTR
+**popCIRCL 3
+[CIRCLE]
+
+[CEN,RAD:]*^C^CCIRCLE \DRAG
+[CEN,DIA:]*^C^CCIRCLE \D
+[2 POINT:]*^C^CCIRCLE 2P \DRAG
+[3 POINT:]*^C^CCIRCLE 3P \\DRAG
+[TTR:]*^C^CCIRCLE TTR
+**ASHADE 3
+[LIGHTS:]^C^C$S=X $S=LIGHTS LIGHT
+[CAMERA:]^C^C$S=X $S=CAMERA CAMERA
+[ACTION]^C^C$S=X $S=ACTION
+
+[CAMVIEW:]^C^CCAMVIEW
+**LIGHTS 3
+[LIGHT:]^C^CLIGHT
+
+[Point]p
+Directed
+
+[Filters]
+.x
+.y
+.z
+.xy
+.xz
+.yz
+
+[CAMERA:]^C^C$S=X $S=CAMERA CAMERA
+[ACTION]$S=X $S=ACTION
+**CAMERA 3
+[CAMERA:]^C^CCAMERA
+
+[Filters]
+.x
+.y
+.z
+.xy
+.xz
+.yz
+
+[CAMVIEW:]^C^CCAMVIEW
+
+
+[LIGHTS:]^C^C$S=X $S=LIGHTS LIGHT
+[ACTION]$S=X $S=ACTION
+**ACTION 3
+[ACTION]
+
+[SCENE:]^C^CSCENE
+[FLMROLL:]^C^CFILMROLL
+
+
+
+
+
+
+
+
+
+[LIGHTS:]^C^C$S=X $S=LIGHTS LIGHT
+[CAMERA:]^C^C$S=X $S=CAMERA CAMERA
+**ELLIPSE 3
+[ELLIPSE:]^C^CELLIPSE
+
+[Center]C
+Rotation
+Iso
+Diameter
+**POLYGON 3
+[POLYGON:]^C^CPOLYGON
+
+Edge
+[I-scribe]I
+[C-scribe]C
+**SHAPE 3
+[SHAPE:]^C^CSHAPE
+?
+
+[LOAD:]^C^CLOAD
+?
+**SKETCH 3
+[SKETCH:]^C^CSKETCH
+
+Connect
+Erase
+Record
+
+[eXit]x
+Quit
+
+[------]
+[SKPOLY:]'SETVAR SKPOLY 1
+[SKLINE:]'SETVAR SKPOLY 0
+[------]
+**SOLID 3
+[SOLID:]^C^CSOLID
+
+[FILL ON]'SETVAR FILLMODE 1
+[FILL OFF]'SETVAR FILLMODE 0
+**TRACE 3
+[TRACE:]^C^CTRACE
+
+[FILL ON]'SETVAR FILLMODE 1
+[FILL OFF]'SETVAR FILLMODE 0
+**POINT 3
+[POINT:]^C^CPOINT
+.x
+.y
+.z
+.xy
+.xz
+.yz
+
+[Complex]
+[Points]
+[example:]^C^CVSLIDE points
+[remove]^C^CREDRAW
+[example:]^C^CREDRAW
+[Pdmode:]'SETVAR PDMODE
+[Pdsize:]'SETVAR PDSIZE
+**HATCH 3
+[HATCH:]^C^CHATCH
+?
+
+u
+u,o
+u,i
+Yes
+
+Window
+Last
+Previous
+Crossing
+Remove
+Add
+Undo
+**3DFACE 3
+[3DFACE:]^C^C3DFACE
+
+.x
+.y
+.z
+.xy
+.xz
+.yz
+
+[Invisibl]I
+
+[ShowEdge]^P(setvar "splframe" 1)(prompt "Invisible edges will be SHOWN after next Regeneration.")(princ) ^P
+[HideEdge]^P(setvar "splframe" 0)(prompt "Invisible edges will be HIDDEN after next Regeneration.")(princ) ^P
+
+**3DPOLY 3
+[3DPOLY:]^C^C3DPOLY
+
+Close
+Undo
+.x
+.y
+.z
+.xy
+.xz
+.yz
+**ID 3
+[ID:]^C^CID
+
+.x
+.y
+.z
+.xy
+.xz
+.yz
+**LIMITS 3
+
+[LIMITS:]^C^CLIMITS
+
+ON
+OFF
+**UCS1 3
+[UCS:]^C^CUCS
+[DDUCS:]^C^CDDUCS
+
+?
+Previous
+Restore
+[Save]S
+Delete
+World
+
+[RENAME:]^C^CRename UCS
+[Follow:]'SETVAR UCSFOLLOW
+
+[next]$S=X $S=UCS2
+**UCS2 3
+[UCS:]$S=X $S=UCS1 ^C^CUCS
+
+Origin
+Zaxis
+3poi
